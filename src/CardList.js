@@ -6,13 +6,15 @@ const CardList = ({ robots }) => {
     <div>
       {
         // You can able to render all of the items in the list
-        robots.map((robot, i) => {
+        robots.map((robot) => {
+          // destructuring
+          let {id, name, email} = robot;
           return (
             <Card 
-              key={robots[i].id}
-              id={robots[i].id} 
-              name={robots[i].name} 
-              email={robots[i].email} 
+              key={id}
+              id={id} 
+              name={name} 
+              email={email} 
             />
           );
         })  
