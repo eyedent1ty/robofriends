@@ -3,6 +3,7 @@ import CardList from './CardList';
 import SearchBox from './SearchBox';
 import ColorPicker from './ColorPicker';
 import { robots } from './robots';
+import './App.css';
 
 class App extends Component{
 
@@ -21,7 +22,7 @@ class App extends Component{
   }
 
   onInputChange = (event) => {
-    if(event.target.attributes.id.value == 'color1'){
+    if(event.target.attributes.id.value === 'color1'){
       this.setState({ color1: event.target.value });
     }else{
       this.setState({ color2: event.target.value });
@@ -36,8 +37,8 @@ class App extends Component{
     const filteredRobots = robots.filter(robot => robot.name.toLowerCase().includes(this.state.searchField.toLowerCase()));
     return(
       <div className="tc">
-        <h1>RoboFriends</h1>
-        <ColorPicker inputChange={this.onInputChange} currentColor={gradientBackground}/>
+        <h1 className="f1">RoboFriends</h1>
+        <ColorPicker inputChange={this.onInputChange} currentColor={gradientBackground} color1={this.state.color1} color2={this.state.color2}/>
         <SearchBox searchChange={this.onSearchChange} />
         <CardList robots={filteredRobots} />
       </div>
