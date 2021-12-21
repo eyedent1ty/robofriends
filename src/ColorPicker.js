@@ -7,7 +7,6 @@ const ColorPicker = ({ inputChange, currentColor }) => {
       <input id="color2" type="color" onInput={inputChange}/>
       <h5>Current Color</h5>
       <p>{currentColor}</p>
-      <p>Hello new branch</p>
     </div>
   );
 }
