@@ -8,7 +8,7 @@ const CardList = ({ robots }) => {
         // You can able to render all of the items in the list
         robots.map((robot) => {
           // destructuring
-          let {id, name, email} = robot;
+          const {id, name, email} = robot;
           return (
             <Card 
               key={id}

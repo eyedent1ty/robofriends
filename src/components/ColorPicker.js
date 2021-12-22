@@ -9,6 +9,6 @@ const ColorPicker = ({ inputChange, currentColor, color1, color2 }) => {
       <p>{currentColor}</p>
     </div>
   );
-}
+};
 
 export default ColorPicker;
